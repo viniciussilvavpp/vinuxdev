@@ -1,11 +1,11 @@
 export default {
   site: {
-    title: "My Blog",
-    subtitle: "My Blog Subtitle",
-    description: "D-Sketon's blog",
-    keywords: "D-Sketon, blog, astro, theme",
-    author: "D-Sketon",
-    language: "zh-CN",
+    title: "VinuxDev",
+    subtitle: "Documentando a vida",
+    description: "Mantendo o hábito de escrever sobre o que aprendo, e o que me interessa.",
+    keywords: "Vinicius Silva, blog, astro, theme",
+    author: "Vinicius Silva",
+    language: "pt-br",
   },
 
   sidebar: {
@@ -21,7 +21,7 @@ export default {
     { name: "about", url: "/about" },
   ],
 
-  banner: "/images/banner.webp", // which means themes/reimu/source/images/banner.webp
+  banner: "/images/robot-new.webp", // which means themes/reimu/source/images/banner.webp
   // You can also write it in the form of the following url
   // banner: "https://example.com"
 
@@ -29,9 +29,9 @@ export default {
   banner_srcset: {
     enable: true,
     srcset: [
-      { src: "/images/banner-600w.webp", media: "(max-width: 479px)" },
-      { src: "/images/banner-800w.webp", media: "(max-width: 799px)" },
-      { src: "/images/banner.webp", media: "(min-width: 800px)" },
+      { src: "/images/robot-new-600w.webp", media: "(max-width: 479px)" },
+      { src: "/images/robot-new-800w.webp", media: "(max-width: 799px)" },
+      { src: "/images/robot-new.webp", media: "(min-width: 800px)" },
     ],
   },
 
@@ -59,13 +59,13 @@ export default {
   social: {
     // email: mailto:xxx@gmail.com
     github: "https://github.com/yourname",
-    google: "https://plus.google.com/yourname",
+    //google: "https://plus.google.com/yourname",
     twitter: "https://twitter.com/yourname",
-    facebook: "https://www.facebook.com/yourname",
+    //facebook: "https://www.facebook.com/yourname",
     // instagram: https://www.instagram.com/yourname
-    // linkedin: https://www.linkedin.com/in/yourname
+    linkedin: "https://www.linkedin.com/in/yourname",
     // pinterest: https://www.pinterest.com/yourname
-    // youtube: https://www.youtube.com/channel/yourname
+    youtube: "https://www.youtube.com/channel/yourname",
     // vimeo: https://vimeo.com/yourname
     // flickr: https://www.flickr.com/photos/yourname
     // dribbble: https://dribbble.com/yourname
@@ -90,7 +90,7 @@ export default {
     appKey: "", // leancloud application app key
     pageSize: 10, // comment list page size
     avatar: "mp", // gravatar style https://valine.js.org/#/avatar
-    lang: "zh-cn", // i18n: zh-cn/en
+    lang: "pt-br", // i18n: zh-cn / en / pt-BR
     placeholder: "Just go go", // valine comment input placeholder(like: Please leave your footprints )
     guest_info: "nick,mail,link", //valine comment header info
     recordIP: true, // whether to record the IP address of the commenters
@@ -103,7 +103,7 @@ export default {
   waline: {
     enable: false,
     serverURL: "",
-    lang: "zh-CN",
+    lang: "pt-br",
     locale: {}, // https://waline.js.org/guide/features/i18n.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%AD%E8%A8%80
     emoji: [
       "https://unpkg.com/@waline/emojis@1.2.0/weibo",
@@ -190,7 +190,7 @@ export default {
 
   preloader: {
     enable: true,
-    text: "少女祈祷中...",
+    text: "Carregando...",
     rotate: true, // whether to rotate the icon
   },
 

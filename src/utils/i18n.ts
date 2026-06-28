@@ -1,5 +1,6 @@
 
 import en from "../languages/en";
+import ptBr from "../languages/pt-br";
 import ja from "../languages/ja";
 import zhCn from "../languages/zh-cn";
 import zhTw from "../languages/zh-tw";
@@ -8,12 +9,13 @@ import { SITE } from "./config";
 
 const language = SITE.language.toLowerCase();
 
-const languages = ["en", "ja", "zh-cn", "zh-tw"];
+const languages = ["en", "pt-br", "ja", "zh-cn", "zh-tw"];
 
 let i18n: Record<string, any> = {};
 
 const langMap: Record<string, any> = {
   "en": en,
+  "pt-br": ptBr,
   "ja": ja,
   "zh-cn": zhCn,
   "zh-tw": zhTw,
