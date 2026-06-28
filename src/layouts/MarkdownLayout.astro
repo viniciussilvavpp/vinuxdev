@@ -8,6 +8,7 @@ import type { CollectionEntry } from "astro:content";
 import { urlFor } from "../utils/urlFor";
 import Footer from "../components/Footer.astro";
 import Date from "../components/post/Date.astro";
+import TocButton from "../components/post/TocButton.astro";
 import Comment from "../components/post/Comment.astro";
 import HeaderTitle from "../components/partial/HeaderTitle.astro";
 
@@ -60,6 +61,7 @@ const {
               ? new globalThis.Date(pubDate as any)
               : (pubDate as Date)}
           />
+          {toc && headings.length > 0 && <TocButton />}
         </div>
         <div class="hr-line"></div>
         <div class="article-entry" itemprop="articleBody">
@@ -107,11 +109,15 @@ const {
 
   .article-meta {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 12px;
     padding: 20px 36px 0;
 
     @media screen and (max-width: 767px) {
       padding: 20px 16px 0;
+      justify-content: space-between;
     }
   }
 </style>

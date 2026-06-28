@@ -24,10 +24,10 @@ const showToc = isPost && toc && headings.length > 0;
   {
     showToc ? (
       <>
-        <div class="sidebar-toc-sidebar">
+        <div class="sidebar-toc-sidebar hidden">
           <TocSidebar headings={headings} />
         </div>
-        <div class="sidebar-common-sidebar hidden">
+        <div class="sidebar-common-sidebar">
           <CommonSidebar />
         </div>
       </>
@@ -41,10 +41,10 @@ const showToc = isPost && toc && headings.length > 0;
   {
     showToc && (
       <div class="sidebar-btn-wrapper" style="position:static">
-        <div class="sidebar-toc-btn current">
+        <div class="sidebar-toc-btn">
           <Icon name="fa6-solid:sitemap" size={20} />
         </div>
-        <div class="sidebar-common-btn">
+        <div class="sidebar-common-btn current">
           <Icon name="fa6-solid:house-chimney" size={20} />
         </div>
       </div>

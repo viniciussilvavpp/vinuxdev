@@ -64,6 +64,11 @@
       isMobileNavAnim = true;
       document.body.classList.toggle("mobile-nav-on");
       mask?.classList.remove("hide");
+      // Reset to common sidebar (navigation) when opening
+      $$(".sidebar-common-btn").forEach((el) => el.classList.add("current"));
+      $$(".sidebar-toc-btn").forEach((el) => el.classList.remove("current"));
+      $$(".sidebar-common-sidebar").forEach((el) => el.classList.remove("hidden"));
+      $$(".sidebar-toc-sidebar").forEach((el) => el.classList.add("hidden"));
       setTimeout(() => {
         isMobileNavAnim = false;
       }, 300);

@@ -1,0 +1,74 @@
+---
+import { Icon } from "astro-icon/components";
+import { __ } from "../../utils/i18n";
+---
+
+<button id="toc-mobile-btn" class="toc-mobile-btn" aria-label={__("toc")}>
+  <Icon
+    name="fa6-solid:list"
+    style="margin-right: 8px; vertical-align: bottom;"
+  />
+  {__("toc")}
+</button>
+
+<style>
+  .toc-mobile-btn {
+    display: none;
+    font-size: 14px;
+    color: var(--red-1);
+    background: var(--red-5);
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 0 0 16px;
+    box-shadow: var(--shadow-meta);
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+    font: 700 14px 'LXGW WenKai Screen', -apple-system, PingFang SC,
+      Microsoft YaHei, sans-serif;
+    align-items: center;
+  }
+
+  .toc-mobile-btn:active {
+    transform: scale(0.96);
+  }
+
+  @media screen and (max-width: 767px) {
+    .toc-mobile-btn {
+      display: flex;
+    }
+  }
+</style>
+
+<script>
+  function initTocButton() {
+    const btn = document.getElementById("toc-mobile-btn");
+    if (!btn) return;
+
+    btn.addEventListener("click", () => {
+      // Open mobile nav
+      document.body.classList.add("mobile-nav-on");
+      const mask = document.getElementById("mask");
+      mask?.classList.remove("hide");
+
+      // Activate TOC tab
+      setTimeout(() => {
+        document.querySelectorAll(".sidebar-toc-btn").forEach((el) => {
+          el.classList.add("current");
+        });
+        document.querySelectorAll(".sidebar-common-btn").forEach((el) => {
+          el.classList.remove("current");
+        });
+        document.querySelectorAll(".sidebar-toc-sidebar").forEach((el) => {
+          el.classList.remove("hidden");
+        });
+        document.querySelectorAll(".sidebar-common-sidebar").forEach((el) => {
+          el.classList.add("hidden");
+        });
+      }, 50);
+    });
+  }
+
+  initTocButton();
+  document.addEventListener("astro:page-load", initTocButton);
+</script>
