@@ -168,10 +168,10 @@ export default {
 
   friend: [
     {
-      name: "D-Sketon",
-      url: "https://d-sketon.github.io/",
-      desc: "Main Site with hexo-theme-reimu",
-      avatar: "https://d-sketon.github.io/avatar/avatar.webp",
+      name: "viniciussilvavpp",
+      url: "https://viniciussilvavpp.github.io/",
+      desc: "Acesse minha página no github para ver meus projetos de hobby e estudos.",
+      avatar: "https://avatars.githubusercontent.com/u/36908848?v=4",
     },
   ],
 
